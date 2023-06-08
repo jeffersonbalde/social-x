@@ -1,7 +1,16 @@
+import { useState } from 'react'
 import './Navbar.css'
 import { SiAnaconda } from 'react-icons/si'
+import{ BiMenuAltRight } from 'react-icons/bi'
+import { AiOutlineClose } from 'react-icons/ai'
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
+
   return (
     <nav className="container navbar">
       <div className="logo">
@@ -16,9 +25,20 @@ const Navbar = () => {
           <li><a href="#">Features</a></li>
           <li><a href="#">Download</a></li>
           <li><a href="#">Subscribe</a></li>
-          <li><a href="#">Get Started</a></li>
+          <li><a 
+            href="#"
+            className='btn btn-dark'
+            >Get Started
+          </a></li>
         </ul>
       </menu>
+
+      <div className="menu-icons" onClick={toggleMenu}>
+        {
+          showMenu ? <AiOutlineClose color="#fff" size={29}/>
+                    : <BiMenuAltRight color="#fff" size={33}/>
+        }
+      </div>
     </nav>
   )
 }
