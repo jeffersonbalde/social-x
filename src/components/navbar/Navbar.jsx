@@ -8,7 +8,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu)
+    setShowMenu(currenState => !currenState)
   }
 
   return (
@@ -20,12 +20,13 @@ const Navbar = () => {
         </p>
       </div>
       <menu>
-        <ul className='nav-links'>
+        <ul className='nav-links' id={showMenu ? 'nav-links-mobile' : 'nav-links-mobile-hide'}>
           <li><a href="#">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="#">Download</a></li>
           <li><a href="#">Subscribe</a></li>
-          <li><a 
+          <li className='nav-btn'>
+            <a 
             href="#"
             className='btn btn-dark'
             >Get Started
