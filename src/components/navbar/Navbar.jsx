@@ -3,6 +3,7 @@ import './Navbar.css'
 import { SiAnaconda } from 'react-icons/si'
 import{ BiMenuAltRight } from 'react-icons/bi'
 import { AiOutlineClose } from 'react-icons/ai'
+import Button from '../UI/button/Button'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,12 +26,15 @@ const Navbar = () => {
           <li><a href="#">Features</a></li>
           <li><a href="#">Download</a></li>
           <li><a href="#">Subscribe</a></li>
-          <li className='nav-btn'>
+          {/* <li className='nav-btn'>
             <a 
             href="#"
             className='btn btn-dark'
             >Get Started
-          </a></li>
+          </a></li> */}
+          <li className='nav-btn'>
+            <Button text="Learn More" btnClass="btn-dark" href="#faq"/>
+          </li>
         </ul>
       </menu>
 
