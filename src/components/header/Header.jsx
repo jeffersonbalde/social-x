@@ -1,5 +1,6 @@
 import Button from "../UI/button/Button"
 import '../UI/button/Button.css';
+  
 
 const Header = () => {
   return (
@@ -20,7 +21,7 @@ const Header = () => {
           </div>
         </div>
         <div className="header-right">
-
+          <img src="" />
         </div>
       </div>
     </section>
